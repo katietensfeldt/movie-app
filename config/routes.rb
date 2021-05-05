@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get "/all_actors" => "actors#all_actors"
+  get "/actor_by_id" => "actors#actor_by_id"
 end
