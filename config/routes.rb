@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   # Going to actors controller
   get "/all_actors" => "actors#all_actors"
-  get "/actor_by_id" => "actors#actor_by_id"
+
+  get "/find_actor" => "actors#find_actor"
+  get "/find_actor/:id" => "actors#find_actor"
+
+  post "/find_an_actor" => "actors#find_actor"
 
   # Going to movies controller
   get "/all_movies" => "movies#all_movies"
