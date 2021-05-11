@@ -1,16 +1,15 @@
 Rails.application.routes.draw do
-  # Going to actors controller
-  get "/all_actors" => "actors#all_actors"
+  #Actors routes
+  get "/actors" => "actors#index"
+  post "/actors" => "actors#create"
+  get "/actors/:id" => "actors#show"
+  patch "/actors/:id" => "actors#update"
+  delete "/actors/:id" => "actors#destroy"
 
-  get "/find_actor" => "actors#find_actor"
-  get "/find_actor/:id" => "actors#find_actor"
-
-  post "/find_an_actor" => "actors#find_actor"
-
-  # Going to movies controller
-  get "/all_movies" => "movies#all_movies"
-  get "/first_movie" => "movies#first_movie"
-  get "/second_movie" => "movies#second_movie"
-  get "/third_movie" => "movies#third_movie"
-  get "/fourth_movie" => "movies#fourth_movie"
+  # Movies routes
+  get "/movies" => "movies#index"
+  post "/movies" => "movies#create"
+  get "/movies/:id" => "movies#show"
+  patch "/movies/:id" => "movies#update"
+  delete "/movies/:id" => "movies#destroy"
 end
