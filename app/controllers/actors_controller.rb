@@ -1,6 +1,9 @@
 class ActorsController < ApplicationController
   def index
     actors = Actor.all
+    if params[:sort] == "age"
+      actors = actors.order(age: :desc)
+    end
     render json: actors.as_json
   end
 
