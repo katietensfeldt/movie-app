@@ -52,3 +52,6 @@ class ActorsController < ApplicationController
   end
 
 end
+
+
+# 3 4 7 9 10 11 12
